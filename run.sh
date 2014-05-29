@@ -54,7 +54,7 @@ fi
 info 'starting s3 synchronisation'
 
 set +e
-SYNC="s3cmd sync $WERCKER_S3SYNC_OPTS --delete-removed --verbose ./ $WERCKER_S3SYNC_BUCKET_URL"
+SYNC="s3cmd sync $WERCKER_S3SYNC_OPTS --verbose ./ $WERCKER_S3SYNC_BUCKET_URL"
 debug "$SYNC"
 sync_output=$($SYNC)
 
